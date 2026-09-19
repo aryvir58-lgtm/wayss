@@ -4,6 +4,8 @@ on:
   push:
     branches: ["production-build", "main"]
   workflow_dispatch:
+  pull_request:
+    branches: ["main"]
 
 permissions:
   contents: read
