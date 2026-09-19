@@ -42,3 +42,13 @@ jobs:
           name: Wayss-debug-apk
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+
+      - name: Package source ZIP
+        run: zip -r Wayss-source.zip . -x ".git/*" "app/build/*" ".gradle/*"
+
+      - name: Upload source ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: Wayss-source
+          path: Wayss-source.zip
+          if-no-files-found: error
