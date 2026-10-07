@@ -1,0 +1,11 @@
+{
+  "name": "wayss-ai",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["backend"],
+  "scripts": {
+    "install:all": "npm install --prefix backend",
+    "dev": "npm run dev --prefix backend",
+    "start": "npm start --prefix backend"
+  }
+}
