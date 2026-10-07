@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07132f"><title>Wayss — AI Assistant</title>
+<link rel="icon" href="/assets/wayss-icon.svg">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div id="app">
+<aside class="sidebar">
+<div class="brand"><img src="/assets/wayss-icon.svg"><b>Wayss</b></div>
+<button id="newChat" class="primary wide">＋ New chat</button>
+<nav><button class="nav active">⌂ <span>Home</span></button><button class="nav" id="searchNav">⌕ <span>Explore</span></button><button class="nav" id="libraryNav">▣ <span>Library</span></button></nav>
+<div class="chatLabel">Chats <button id="clearChats">Clear</button></div><div id="history" class="history"></div>
+<div class="sideBottom"><div class="userMini"><img src="/assets/wayss-icon.svg"><div><b id="sideName">Guest</b><small id="sideEmail">Not signed in</small></div></div><button id="settingsBtn" class="iconBtn">⚙</button></div>
+</aside>
+<main class="main">
+<header><button id="mobileMenu" class="iconBtn">☰</button><div id="chatTitle">New chat</div><div class="headActions"><button id="themeBtn" class="iconBtn">☾</button><button id="logoutBtn" class="ghost hidden">Log out</button></div></header>
+<section id="login" class="auth hidden"><div class="authCard"><img src="/assets/wayss-icon.svg"><h1>Welcome to Wayss</h1><p>Your AI workspace for chat, images, code and more.</p><input id="authName" placeholder="Name (sign up only)"><input id="authEmail" type="email" placeholder="Email"><input id="authPassword" type="password" placeholder="Password"><button id="authSubmit" class="primary wide">Sign in</button><button id="toggleAuth" class="linkBtn">Create account</button><div id="authError" class="error"></div></div></section>
+<section id="home" class="home"><img class="heroLogo" src="/assets/wayss-icon.svg"><h1>Hello, <span id="helloName">there</span></h1><p>What can I help you create today?</p>
+<div class="capGrid"><button data-action="chat"><b>✎ Write</b><small>Ideas, posts, scripts, lyrics</small></button><button data-action="image"><b>▧ Generate image</b><small>Create realistic visuals from prompts</small></button><button data-action="code"><b>&lt;/&gt; Code</b><small>Build, debug and explain code</small></button><button data-action="file"><b>□ Analyze file</b><small>Upload and understand files</small></button><button data-action="search"><b>⌕ Web search</b><small>Search current information</small></button><button data-action="voice"><b>♩ Voice</b><small>Talk with Wayss</small></button></div></section>
+<section id="chat" class="chat hidden"><div id="messages"></div></section>
+<div id="composerWrap" class="composerWrap hidden"><div id="attachmentPreview" class="attachmentPreview"></div><div class="composer"><button id="attachBtn" class="round">＋</button><textarea id="prompt" rows="1" placeholder="Message Wayss…"></textarea><button id="voiceBtn" class="round">♩</button><button id="sendBtn" class="send">↑</button></div><div class="tools"><button data-tool="image">▧ Image</button><button data-tool="file">□ File</button><button data-tool="search">⌕ Search</button><button data-tool="code">&lt;/&gt; Code</button><button data-tool="voice">♩ Voice</button></div><input id="fileInput" type="file" hidden accept="image/*,.txt,.md,.json,.js,.ts,.tsx,.jsx,.html,.css,.py,.java,.kt,.xml,.csv,.sql,.yaml,.yml,.pdf,.docx"></div>
+</main></div><div id="toast"></div>
+<script src="/app.js"></script>
+</body></html>
